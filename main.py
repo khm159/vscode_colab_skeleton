@@ -1,6 +1,6 @@
 
 from models import model_builder
-from opts import parser 
+from opts import opt 
 
 def main_worker(opt):
     """
@@ -13,4 +13,4 @@ def main_worker(opt):
     print("output : ", output.shape)
 
 if __name__ == "__main__":
-    main_worker(parser)
+    main_worker(opt)
