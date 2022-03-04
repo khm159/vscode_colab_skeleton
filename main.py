@@ -13,4 +13,4 @@ def main_worker(opt):
     print("output : ", output.shape)
 
 if __name__ == "__main__":
-    train(parser)
+    main_worker(parser)
