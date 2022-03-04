@@ -5,6 +5,7 @@ parser = argparse.ArgumentParser(description="Colab VSCode Skeletn Code ")
 parser.add_argument('--dataset', type=str)
 # ========================= Model Configs ==========================
 parser.add_argument('--arch', type=str, default="resnet18", choices=['resnet18'])
+parser.add_argument('--num_classes', type=int, default=1000)
 parser.add_argument('--pretrain', type=bool, default=True)
 # ========================= Learning Configs ==========================
 parser.add_argument('--epochs', default=100, type=int, metavar='N',
