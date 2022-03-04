@@ -2,6 +2,7 @@
 from models import model_builder
 from opts import parser
 from tools.dataset import get_dataset_info
+import torch 
 
 def main_worker(opt):
     """
