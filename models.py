@@ -17,7 +17,7 @@ def model_builder(opt):
                 else default initialized model  
     """
     if opt.arch == 'resnet18':
-        if opt.num_classes == 1000
+        if opt.num_classes == 1000:
             return models.resnet18(opt.pretrained).cuda()
         else:
             model = models.resnet18(opt.pretrained)
