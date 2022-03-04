@@ -1,6 +1,6 @@
 
 from models import model_builder
-from opts import opt 
+from opts import parser
 
 def main_worker(opt):
     """
@@ -13,4 +13,5 @@ def main_worker(opt):
     print("output : ", output.shape)
 
 if __name__ == "__main__":
+    opt = parser.parse_args()
     main_worker(opt)

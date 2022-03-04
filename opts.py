@@ -1,33 +1,33 @@
 
 import argparse
-opt = argparse.ArgumentParser(description="Colab VSCode Skeletn Code ")
+parser = argparse.ArgumentParser(description="Colab VSCode Skeletn Code ")
 
-opt.add_argument('--dataset', type=str)
+parser.add_argument('--dataset', type=str)
 # ========================= Model Configs ==========================
-opt.add_argument('--arch', type=str, default="resnet18", choices=['resnet18'])
-opt.add_argument('--pretrain', type=bool, default=True)
+parser.add_argument('--arch', type=str, default="resnet18", choices=['resnet18'])
+parser.add_argument('--pretrain', type=bool, default=True)
 # ========================= Learning Configs ==========================
-opt.add_argument('--epochs', default=100, type=int, metavar='N',
+parser.add_argument('--epochs', default=100, type=int, metavar='N',
                     help='number of total epochs to run')
-opt.add_argument('-b', '--batch-size', default=32, type=int,
+parser.add_argument('-b', '--batch-size', default=32, type=int,
                     metavar='N', help='mini-batch size (default: 256)')
-opt.add_argument('--lr', '--learning-rate', default=0.001, type=float,
+parser.add_argument('--lr', '--learning-rate', default=0.001, type=float,
                     metavar='LR', help='initial learning rate')
-opt.add_argument('--lr_type', default='step', type=str,
+parser.add_argument('--lr_type', default='step', type=str,
                     metavar='LRtype', help='learning rate type')
-opt.add_argument('--lr_steps', default=[50, 100], type=float, nargs="+",
+parser.add_argument('--lr_steps', default=[50, 100], type=float, nargs="+",
                     metavar='LRSteps', help='epochs to decay learning rate by 10')
-opt.add_argument('--momentum', default=0.9, type=float, metavar='M',
+parser.add_argument('--momentum', default=0.9, type=float, metavar='M',
                     help='momentum')
-opt.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
+parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
                     metavar='W', help='weight decay (default: 5e-4)')
 # ========================= Monitor Configs ==========================
-opt.add_argument('--print-freq', '-p', default=20, type=int,
+parser.add_argument('--print-freq', '-p', default=20, type=int,
                     metavar='N', help='print frequency (default: 10)')
-opt.add_argument('--eval-freq', '-ef', default=1, type=int,
+parser.add_argument('--eval-freq', '-ef', default=1, type=int,
                     metavar='N', help='evaluation frequency (default: 5)')
 # ========================= Runtime Configs ==========================
-opt.add_argument('-j', '--workers', default=8, type=int, metavar='N',
+parser.add_argument('-j', '--workers', default=8, type=int, metavar='N',
                     help='number of data loading workers (default: 8)')
-opt.add_argument('--resume', default='', type=str, metavar='PATH',
+parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
